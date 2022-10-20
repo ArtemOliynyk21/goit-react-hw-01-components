@@ -1,18 +1,19 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const Container = styled.section`
-  width: 500px;
+  max-width: 400px;
   background-color: white;
   margin: 30px auto;
-  border-radius: 4px;
+  border-radius: 5px;
 `;
 
 export const Title = styled.h2`
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-`
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+  color: gray;
+`;
 export const StatsList = styled.ul`
   display: flex;
   justify-content: center;
@@ -22,6 +23,8 @@ export const StatsItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 15px;
+  width: calc(100% / 5);
 `;
 
 export const Label = styled.span`
@@ -30,6 +33,10 @@ export const Label = styled.span`
 `;
 
 export const Precentage = styled.span`
-    font-size: 20px;
-    font-weight: 500;
+  font-size: 24px;
+  font-weight: 500;
+`;
+
+export const RandomColor = () => `
+  #${Math.floor(Math.random() * 16777215).toString(16)}
 `;
