@@ -12,15 +12,7 @@ import {
   Quantity,
 } from './Profile.styled';
 
-export const Profile = ({
-  username,
-  tag,
-  location,
-  avatar,
-  followers,
-  views,
-  likes,
-}) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <Container>
       <Description>
@@ -33,15 +25,15 @@ export const Profile = ({
       <StatsList>
         <StatsItem>
           <Label>Followers</Label>
-          <Quantity>{followers}</Quantity>
+          <Quantity>{stats.followers}</Quantity>
         </StatsItem>
         <StatsItem>
           <Label>Views</Label>
-          <Quantity>{views}</Quantity>
+          <Quantity>{stats.views}</Quantity>
         </StatsItem>
         <StatsItem>
           <Label>Likes</Label>
-          <Quantity>{likes}</Quantity>
+          <Quantity>{stats.likes}</Quantity>
         </StatsItem>
       </StatsList>
     </Container>
@@ -53,7 +45,9 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: PropTypes.exact({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };

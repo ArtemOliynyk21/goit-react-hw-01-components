@@ -6,13 +6,13 @@ export const Container = styled.div`
   margin-right: auto;
 `;
 
-export const FriendsList = styled.ul`
+export const List = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const FriendsItem = styled.li`
+export const FriendItem = styled.li`
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -20,7 +20,7 @@ export const FriendsItem = styled.li`
   padding: 10px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 5px;
+  border-radius: 5px;
 
   :not(:last-child) {
     margin-bottom: 10px;

@@ -32,13 +32,13 @@ export const TransactionHistory = ({ items }) => {
 };
 
 TransactionHistory.propTypes = {
-  transactions: PropTypes.arrayOf(
+  items: PropTypes.arrayOf(
     PropTypes.shape({
       type: PropTypes.string.isRequired,
       amount: PropTypes.number.isRequired,
       currency: PropTypes.string.isRequired,
     })
-  ),
+  ).isRequired,
 };
 
 /* <table class="transaction-history">
